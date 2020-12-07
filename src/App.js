@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import ReactLazyCard from "./lazy-load-card";
+
+const Container = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+
+const StyledReactLazyCard = styled(ReactLazyCard)``;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <StyledReactLazyCard />
+    </Container>
   );
 }
 
